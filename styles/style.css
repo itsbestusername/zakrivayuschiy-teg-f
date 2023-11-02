@@ -393,6 +393,7 @@
 }
 
 .footer{
+  position: relative;
   margin: 54px 35px 102px;
   border: 2px solid var(--themes-main-color);
   background-color: var(--themes-background);
@@ -427,10 +428,13 @@
 }
 
 .footer__dialog {
+  padding: 32px 42px;
+}
+
+.footer__dialog-content {
   display: grid;
   grid-template-rows: 1.5fr 1fr;
   grid-template-columns: 0.25fr 1fr;
-  padding: 32px 42px;
   gap: 30px;
 }
 

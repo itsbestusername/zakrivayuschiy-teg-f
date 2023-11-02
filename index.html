@@ -135,19 +135,21 @@
       </button>
     </div>
     <dialog class="footer__dialog" id="dialog-id">
-      <svg class="footer__svg footer__svg-grid">
-        <use href="#cassette">
-      </svg>
-      <p class="footer__text">
-        Вставьте
-дискету, чтобы продолжить
-      </p>
-      <button 
-      class="footer__button footer__button-grid"
-      type="button" 
-      onclick="window['dialog-id'].close()">
-      ok
-      </button>
+      <div class="footer__dialog-content">
+        <svg class="footer__svg footer__svg-grid">
+          <use href="#cassette">
+        </svg>
+        <p class="footer__text">
+          Вставьте
+  дискету, чтобы продолжить
+        </p>
+        <button 
+        class="footer__button footer__button-grid"
+        type="button" 
+        onclick="window['dialog-id'].close()">
+        ok
+        </button>
+      </div>
     </dialog>
   </footer>
 </html>
