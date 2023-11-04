@@ -9,6 +9,6 @@
     --background-image: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px), 
         repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px), 
         linear-gradient(180deg, #E7E7E7 0, #E7E7E7 0,01%, #1A1A1A 100%);
-    
+    --padding: 27px 18px 0 25px;
 
 }
