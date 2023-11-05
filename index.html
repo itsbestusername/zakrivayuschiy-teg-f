@@ -535,18 +535,18 @@
     </main>
     <script src="./scripts/like.js"></script>
     <footer class="footer">
-      <div class="footer__item">
-        <svg class="footer__svg" viewBox="0 0 29 28" xmlns="http://www.w3.org/2000/svg">
-          <use href="./svg/floppy2.svg#cassette" fill="currentColor"></use>
-        </svg>
         <button 
         class="footer__button"
         type="button" 
         onclick="window['dialog-id'].showModal()" 
         aria-controls="dialog-id">
-        Сохранить на память
+        <span class="button__text footer__item">
+          <svg class="footer__svg" viewBox="0 0 29 28" xmlns="http://www.w3.org/2000/svg">
+            <use href="./svg/floppy2.svg#cassette" fill="currentColor"></use>
+          </svg>
+          Сохранить на память
+        </span>
         </button>
-      </div>
       <dialog class="footer__dialog" id="dialog-id">
         <div class="footer__dialog-content">
           <svg class="footer__svg-grid" viewBox="0 0 29 28" xmlns="http://www.w3.org/2000/svg">
@@ -558,7 +558,7 @@
           </p>
           <form class="footer__dialog-button" method="dialog">
             <button 
-            class="footer__button footer__button-grid">
+            class="footer__button-grid">
             ok
             </button>
           </form>

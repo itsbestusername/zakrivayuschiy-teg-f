@@ -6,9 +6,7 @@
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-  padding-block-start: clamp(6.25rem, 6.206rem + 0.1878vw, 6.375rem);
-  padding-inline-start: clamp(0.0625rem, -8.1021rem + 34.8357vw, 23.25rem);
-  padding-inline-end: clamp(0.0625rem, -8.1021rem + 34.8357vw, 23.25rem);
+  padding: 102px clamp(0.0625rem, -8.1021rem + 34.8357vw, 23.25rem) 0;
 }
 
 .header {
@@ -16,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   font-family: var(--accent-font), "Copperplate", fantasy;
-  background-color: var(--themes-background);
+  background: var(--themes-background);
   inline-size: clamp(22.875rem, 15.6127rem + 30.9859vw, 43.5rem);
   block-size: clamp(20.1875rem, 19.2852rem + 3.8498vw, 22.75rem);
 }
@@ -28,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   border: 2px solid var(--themes-main-color);
-  background-color: var(--themes-background);
+  background: var(--themes-background);
   padding: clamp(7.25rem, 7.0079rem + 1.0329vw, 7.9375rem) 14px 25px;
 }
 
@@ -89,7 +87,7 @@
   content: "";
   inline-size: 100%;
   block-size: 2px;
-  background-color: var(--themes-main-color);
+  background: var(--themes-main-color);
   left: 0;
   bottom: -2px;
   display: block;
@@ -202,7 +200,7 @@
   display: flex;
   flex-direction: column;
   align-items: end;
-  background-color: var(--themes-background);
+  background: var(--themes-background);
   border: 2px solid var(--themes-main-color);
   font-size: 18px;
   font-weight: var(--wght);
@@ -276,13 +274,13 @@
 }
 
 .card__like-button {
-  min-inline-size: 130px;
-  min-block-size: 38px;
+  inline-size: 130px;
+  block-size: 38px;
   background-color: transparent;
-  border: none;
   position: relative;
-  padding: 6px 35px;
+  padding: 9px 17px;
   border: 2px solid var(--themes-main-color);
+  cursor: pointer;
 }
 
 .card__like-button::after {
@@ -290,7 +288,7 @@
   inset: -1px -1px;
   block-size: 103%;
   inline-size: 101%;
-  background-color: var(--themes-main-color);
+  background: var(--themes-main-color);
   position: absolute;
   transform: scaleX(0);
   transform-origin: left center;
@@ -312,6 +310,7 @@
   mix-blend-mode: difference;
   z-index: 1;
   color: var(--button-color);
+  cursor: pointer;
 }
 
 .card__like-button:focus {
@@ -332,15 +331,10 @@
 }
 
 .footer__item {
-  inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
-  min-block-size: 80px;
-  border: 2px solid var(--themes-main-color);
-  background-color: var(--themes-background);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 13px 18px;
 }
 
 .footer__svg {
@@ -349,20 +343,44 @@
 }
 
 .footer__button {
+  inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+  min-block-size: 80px;
+  border: 2px solid var(--themes-main-color);
+  background: var(--themes-background);
   cursor: pointer;
-  background-color: transparent;
   color: var(--themes-main-color);
-  border: none;
   font-family: var(--accent-font), "Copperplate", fantasy;
   font-size: 14px;
   font-weight: var(--wght);
   line-height: 90%;
-  padding: 0;
+  position: relative;
+}
+
+.footer__button:focus-visible {
+  outline: none;
+}
+
+.footer__button::after {
+  content: "";
+  inset: -1px -1px;
+  block-size: 103%;
+  inline-size: 101%;
+  background: var(--themes-main-color);
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.footer__button:hover::after {
+  transform: scaleX(1);
+  outline: none;
+  cursor: pointer;
 }
 
 .footer__dialog[open] {
   padding: 32px 42px;
-  background-color: var(--themes-background);
+  background: var(--themes-background);
   inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
   min-block-size: 195px;
   border: 2px solid var(--themes-main-color);
@@ -378,7 +396,7 @@
 
 .footer__dialog::backdrop {
   opacity: 0.75;
-  background: var(--themes-main-color, #000);
+  background: var(--themes-main-color);
   backdrop-filter: blur(7px);
 }
 
@@ -417,18 +435,33 @@
 }
 
 .footer__button-grid {
+  font-family: var(--accent-font), "Copperplate", fantasy;
   font-size: 14px;
   font-weight: var(--wght);
   line-height: 90%;
   text-transform: uppercase;
-  min-inline-size: 252px;
-  min-block-size: 38px;
+  inline-size: 100%;
+  block-size: 38px;
   padding: 9px 17px;
   border: 2px solid var(--themes-main-color);
+  color: var(--themes-main-color);
   background: var(--themes-background);
 }
 
-@media (width >= 376px) {
+.footer__button-grid:focus {
+  outline: none;
+}
+
+.footer__button-grid:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--themes-main-color);
+  transition: box-shadow 0.3s ease;
+}
+
+@media (width > 375px) {
+  .page {
+
+  }
   .main {
     margin-block-start: 104px;
     min-inline-size: 372px;
@@ -450,7 +483,9 @@
 
   .footer__item {
     flex-direction: row;
-    justify-content: center;
+  }
+
+  .footer__button {
     min-block-size: 51px;
     padding: 13px;
   }
@@ -462,5 +497,11 @@
   .footer__dialog[open] {
     padding: 32px;
     min-block-size: 193px;
+  }
+}
+
+@media (width > 1440px) {
+  .page {
+  padding: 102px clamp(23.25rem, -8.4717rem + 35.2219vw, 46.5625rem) 0;
   }
 }
