@@ -362,7 +362,7 @@
   position: relative;
 }
 
-.footer__button:focus-visible {
+.footer__button:focus {
   outline: none;
 }
 
