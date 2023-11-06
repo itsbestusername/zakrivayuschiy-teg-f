@@ -408,7 +408,7 @@
 
 .footer__dialog::backdrop {
   opacity: 0.75;
-  background: var(--themes-main-color);
+  background: #000;
   backdrop-filter: blur(7px);
 }
 
