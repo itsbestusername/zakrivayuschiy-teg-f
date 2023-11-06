@@ -393,7 +393,7 @@
 .footer__dialog[open] {
   padding: 32px 42px;
   background: var(--themes-background);
-  inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
+  min-inline-size: 341px;
   min-block-size: 195px;
   border: 2px solid var(--themes-main-color);
 }
@@ -549,5 +549,10 @@
 
   .main__cards-title {
     block-size: 32px;
+  }
+
+  .footer__dialog[open] {
+    inline-size: 357px;
+    block-size: 193px;
   }
 }
