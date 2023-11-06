@@ -77,6 +77,7 @@
 
 .theme-menu__button:hover {
   opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus {
@@ -363,6 +364,12 @@
 
 .footer__button:focus-visible {
   outline: none;
+}
+
+.footer__button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--themes-main-color);
+  transition: box-shadow 0.3s ease;
 }
 
 .footer__button::after {

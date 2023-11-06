@@ -82,12 +82,15 @@
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--heart-color);
-  transition: 0.3s 0.05s;
+  animation: color-change 0.3s ease-in both;
+  animation-delay: 0.05s;
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--heart-color);
+  animation: color-change 0.3s ease-in both;
+  opacity: 1;
   transition: 0.3s;
 }
 
@@ -99,7 +102,8 @@
 .like-icon:hover .main-body {
   fill: var(--themes-main-color);
   opacity: 1;
-  transition: 0.3s 0.05s;
+  transition: 0.3s;
+  transition-delay: 0.05s;
 }
 
 .like-icon:active .main-body {
