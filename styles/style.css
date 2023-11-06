@@ -6,7 +6,7 @@
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-  padding: 102px clamp(0.0625rem, -8.1021rem + 34.8357vw, 23.25rem) 0;
+  padding: 102px 1px 0;
 }
 
 .header {
@@ -15,7 +15,7 @@
   align-items: center;
   font-family: var(--accent-font), "Copperplate", fantasy;
   background: var(--themes-background);
-  inline-size: clamp(22.875rem, 15.6127rem + 30.9859vw, 43.5rem);
+  min-inline-size: 371px;
   block-size: clamp(20.1875rem, 19.2852rem + 3.8498vw, 22.75rem);
 }
 
@@ -27,29 +27,30 @@
   align-items: center;
   border: 2px solid var(--themes-main-color);
   background: var(--themes-background);
-  padding: clamp(7.25rem, 7.0079rem + 1.0329vw, 7.9375rem) 14px 25px;
+  padding: clamp(7.375rem, 6.9789rem + 1.6901vw, 8.5rem) 14px 25px;
 }
 
 .header__area-title {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
+  min-block-size: 54px;
 }
 
 .header__area-text {
-  margin-block-start: 14px;
+  margin-block-start: 17px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
 }
 
 .header__theme-menu {
-  margin-block-start: 22px;
-  margin-inline-start: 26px;
+  margin-block-start: 21px;
+  margin-inline-start: 22px;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 8px;
 }
 
 .theme-menu__button {
@@ -109,13 +110,13 @@
 .main__cards {
   display: flex;
   flex-direction: column;
-  gap: 52px;
+  gap: 53px;
 }
 
 .main__cards-title {
   padding: 5px 10px 6px;
   min-inline-size: 100%;
-  min-block-size: 42px;
+  block-size: 51px;
   font-size: 18px;
   font-weight: var(--wght-title);
 }
@@ -129,7 +130,8 @@
 
 .main__picture-area {
   position: relative;
-  border: 2px solid var(--themes-main-color);
+  border-block-start: 2px solid var(--themes-main-color);
+  border-block-end: 2px solid var(--themes-main-color);
   block-size: clamp(23.375rem, 16.2887rem + 30.2347vw, 43.5rem);
 }
 
@@ -148,11 +150,14 @@
   font-family: var(--accent-font), "Copperplate", fantasy;
   font-size: 14px;
   font-weight: var(--wght);
-  text-transform: uppercase;
   mix-blend-mode: hard-light;
   text-shadow: -1px 0 var(--themes-background), 0 1px var(--themes-background),
     1px 0 var(--themes-background), 0 -1px var(--themes-background);
   opacity: 0.5;
+}
+
+.upper-watermark {
+  text-transform: uppercase;
 }
 
 @supports (
@@ -196,7 +201,7 @@
 }
 
 .main__cards-item {
-  inline-size: 100%;
+  inline-size: 371px;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -325,7 +330,7 @@
 
 .footer {
   position: relative;
-  margin: 50px 30px 65px;
+  margin: 54px 30px 65px;
   display: flex;
   justify-content: center;
 }
@@ -458,22 +463,27 @@
   transition: box-shadow 0.3s ease;
 }
 
-@media (width > 375px) {
+@media (width >= 376px) {
   .page {
-
+    padding: 102px clamp(0.0625rem, -8.1021rem + 34.8357vw, 23.25rem) 0;
   }
+
+  .header__area-text {
+  margin-block-start: 20px;
+}
+
   .main {
     margin-block-start: 104px;
     min-inline-size: 372px;
   }
 
   .main__cards {
-    gap: 54px;
+    gap: 55px;
   }
 
   .main__cards-title {
-    padding: 3px 24px 3px 10px;
-    min-block-size: 33px;
+    padding: 4px 24px 4px 10px;
+    min-block-size: 32px;
   }
 
   .main__picture-area {
@@ -481,13 +491,21 @@
     max-inline-size: 696px;
   }
 
+  .main__cards-item {
+    inline-size: 100%;
+  }
+
+  .main__cards-area {
+  padding: var(--padding-desktop);
+}
+
   .footer__item {
     flex-direction: row;
   }
 
   .footer__button {
     min-block-size: 51px;
-    padding: 13px;
+    padding: 13px 18px;
   }
 
   .footer__svg {
@@ -500,8 +518,29 @@
   }
 }
 
-@media (width > 1440px) {
+@media (width >= 1440px) {
   .page {
-  padding: 102px clamp(23.25rem, -8.4717rem + 35.2219vw, 46.5625rem) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 102px clamp(23.25rem, -8.4717rem + 35.2219vw, 46.5625rem) 0;
+  }
+
+  .header {
+    inline-size: 696px;
+    block-size: 364px;
+  }
+
+  .header__area-title {
+    block-size: 65px;
+    font-size: 65px;
+  }
+
+  .main {
+    inline-size: 696px;
+  }
+
+  .main__cards-title {
+    block-size: 32px;
   }
 }
