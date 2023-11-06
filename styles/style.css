@@ -119,14 +119,14 @@
   min-inline-size: 100%;
   block-size: 51px;
   font-size: 18px;
-  font-weight: var(--wght-title);
+  font-variation-settings: "wght" var(--wght-title);
 }
 
 .main__title {
   padding: 4px 9px;
   min-inline-size: 100%;
   font-size: 18px;
-  font-weight: var(--wght-title);
+  font-variation-settings: "wght" var(--wght-title);
 }
 
 .main__picture-area {
@@ -150,7 +150,7 @@
   color: var(--themes-main-color);
   font-family: var(--accent-font), "Copperplate", fantasy;
   font-size: 14px;
-  font-weight: var(--wght);
+  font-variation-settings: "wght" var(--wght);
   mix-blend-mode: hard-light;
   text-shadow: -1px 0 var(--themes-background), 0 1px var(--themes-background),
     1px 0 var(--themes-background), 0 -1px var(--themes-background);
@@ -209,7 +209,7 @@
   background: var(--themes-background);
   border: 2px solid var(--themes-main-color);
   font-size: 18px;
-  font-weight: var(--wght);
+  font-variation-settings: "wght" var(--wght);
   line-height: 116.667%;
 }
 
@@ -222,7 +222,7 @@
 }
 
 .main__cards-text {
-  font-weight: var(--wght);
+  font-variation-settings: "wght" var(--wght);
   line-height: 116.667%;
   font-size: 18px;
 }
@@ -310,7 +310,7 @@
 .button__text {
   font-size: 14px;
   font-family: var(--accent-font), "Copperplate", fantasy;
-  font-weight: var(--wght);
+  font-variation-settings: "wght" var(--wght);
   line-height: 90%;
   position: relative;
   mix-blend-mode: difference;
@@ -357,7 +357,7 @@
   color: var(--themes-main-color);
   font-family: var(--accent-font), "Copperplate", fantasy;
   font-size: 14px;
-  font-weight: var(--wght);
+  font-variation-settings: "wght" var(--wght);
   line-height: 90%;
   position: relative;
 }
@@ -404,6 +404,7 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 30px;
+  color: var(--themes-main-color);
 }
 
 .footer__dialog::backdrop {
@@ -421,7 +422,6 @@
   justify-self: center;
   inline-size: 39px;
   block-size: 38px;
-  fill: var(--themes-main-color);
 }
 
 .footer__text {
@@ -432,7 +432,7 @@
   font-size: 14px;
   font-family: var(--accent-font), "Copperplate", fantasy;
   color: var(--themes-main-color);
-  font-weight: var(--wght);
+  font-variation-settings: "wght" var(--wght);
   line-height: 150%;
   text-transform: uppercase;
   min-inline-size: 198px;
@@ -449,7 +449,7 @@
 .footer__button-grid {
   font-family: var(--accent-font), "Copperplate", fantasy;
   font-size: 14px;
-  font-weight: var(--wght);
+  font-variation-settings: "wght" var(--wght);
   line-height: 90%;
   text-transform: uppercase;
   inline-size: 100%;
@@ -476,8 +476,8 @@
   }
 
   .header__area-text {
-  margin-block-start: 20px;
-}
+    margin-block-start: 20px;
+  }
 
   .main {
     margin-block-start: 104px;
@@ -503,8 +503,8 @@
   }
 
   .main__cards-area {
-  padding: var(--padding-desktop);
-}
+    padding: var(--padding-desktop);
+  }
 
   .footer__item {
     flex-direction: row;
@@ -521,6 +521,8 @@
 
   .footer__dialog[open] {
     padding: 32px;
+    min-inline-size: 341px;
+    max-inline-size: 357px;
     min-block-size: 193px;
   }
 }
