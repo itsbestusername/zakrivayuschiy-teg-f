@@ -444,6 +444,26 @@
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+  position: relative;
+  border: 2px solid var(--themes-main-color);
+}
+
+.footer__dialog-button::after {
+  content: "";
+  inset: -1px -1px;
+  block-size: 103%;
+  inline-size: 101%;
+  background: var(--themes-main-color);
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.footer__dialog-button:hover::after {
+  transform: scaleX(1);
+  outline: none;
+  cursor: pointer;
 }
 
 .footer__button-grid {
@@ -455,9 +475,12 @@
   inline-size: 100%;
   block-size: 38px;
   padding: 9px 17px;
-  border: 2px solid var(--themes-main-color);
-  color: var(--themes-main-color);
   background: var(--themes-background);
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 1;
+  color: var(--button-color);
+  border: none;
 }
 
 .footer__button-grid:focus {
