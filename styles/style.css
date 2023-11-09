@@ -307,6 +307,16 @@
   cursor: pointer;
 }
 
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--themes-main-color);
+  transition: box-shadow 0.3s ease;
+}
+
 .button__text {
   font-size: 14px;
   font-family: var(--accent-font), "Copperplate", fantasy;
@@ -317,16 +327,6 @@
   z-index: 1;
   color: var(--button-color);
   cursor: pointer;
-}
-
-.card__like-button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0px 0px var(--themes-main-color);
-  transition: box-shadow 0.3s ease;
-}
-
-.card__like-button:focus-visible {
-  outline: none;
 }
 
 .footer {
@@ -391,10 +391,10 @@
 }
 
 .footer__dialog[open] {
-  padding: 32px 42px;
+  padding: 29px 42px;
   background: var(--themes-background);
-  min-inline-size: 341px;
-  min-block-size: 195px;
+  inline-size: 341px;
+  block-size: 195px;
   border: 2px solid var(--themes-main-color);
 }
 
@@ -466,6 +466,16 @@
   cursor: pointer;
 }
 
+.footer__dialog-button:focus {
+  outline: none;
+}
+
+.footer__dialog-button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--themes-main-color);
+  transition: box-shadow 0.3s ease;
+}
+
 .footer__button-grid {
   font-family: var(--accent-font), "Copperplate", fantasy;
   font-size: 14px;
@@ -481,6 +491,8 @@
   z-index: 1;
   color: var(--button-color);
   border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .footer__button-grid:focus {
@@ -543,10 +555,9 @@
   }
 
   .footer__dialog[open] {
-    padding: 32px;
-    min-inline-size: 341px;
-    max-inline-size: 357px;
-    min-block-size: 193px;
+    padding: 28px 42px;
+    inline-size: 357px;
+    block-size: 193px;
   }
 }
 
@@ -574,10 +585,5 @@
 
   .main__cards-title {
     block-size: 32px;
-  }
-
-  .footer__dialog[open] {
-    inline-size: 357px;
-    block-size: 193px;
   }
 }
