@@ -403,7 +403,7 @@
   grid-template-rows: 1fr 0.25fr;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
-  grid-row-gap: 30px;
+  grid-row-gap: 28px;
   color: var(--themes-main-color);
 }
 
@@ -436,7 +436,7 @@
   line-height: 150%;
   text-transform: uppercase;
   min-inline-size: 198px;
-  min-block-size: 63px;
+  block-size: 63px;
 }
 
 .footer__dialog-button {
