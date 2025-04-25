@@ -1,3 +1,3 @@
-# zakrivayuschiy-teg-f
-Проект "Закрывающий тег"
-https://github.com/itsbestusername/zakrivayuschiy-teg-f/tree/main/styles
+# Проект "Закрывающий тег"
+Верстка страницы на HTML и CSS с возможностью поставить лайк и переключения темной/светлой темы.
+[Ссылка на сайт](https://itsbestusername.github.io/zakrivayuschiy-teg-f/)
